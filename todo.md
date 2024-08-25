@@ -1,0 +1,1 @@
+- Figure out how to setup ruff linting with pre-commit hooks
