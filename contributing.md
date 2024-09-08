@@ -14,7 +14,7 @@ pip install -e '.[dev]' I have installed a package like this now, how can i upgr
 
 3. Then, you can upgrade the package using pip with the `--upgrade` or `-U` flag:
    ```
-   pip install -U -e '.[dev]'
+   pip install -U -e .[dev]
    ```
 
 This command will:
@@ -26,19 +26,17 @@ If you want to be more specific about which dependencies to upgrade, you can use
 
 - To upgrade only the package itself and not its dependencies:
   ```
-  pip install -U --upgrade-strategy eager -e '.[dev]'
+  pip install -U --upgrade-strategy eager -e .[dev]
   ```
 
 - To upgrade the package and only the dependencies that need to be upgraded to satisfy new requirements:
   ```
-  pip install -U --upgrade-strategy only-if-needed -e '.[dev]'
+  pip install -U --upgrade-strategy only-if-needed -e .[dev]
   ```
 
 Remember that if there are significant changes in the package structure or build system, you might need to uninstall the old version first:
 
 ```
 pip uninstall your-package-name
-pip install -e '.[dev]'
+pip install -e .[dev]
 ```
-
-Would you like me to explain any part of this process in more detail?
