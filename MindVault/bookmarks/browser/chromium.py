@@ -17,6 +17,7 @@ from datetime import date, datetime, timedelta
 
 from fastcore.all import patch
 from pydantic import BaseModel, Field
+from ..._modidx import d as nbdev_settings
 
 # %% ../../../nbs/01_chromium_bookmarks.ipynb 6
 class BookmarkModel(BaseModel):
