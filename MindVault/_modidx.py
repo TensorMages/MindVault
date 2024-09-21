@@ -30,4 +30,6 @@ d = { 'settings': { 'branch': 'main',
                                                       'MindVault.bookmarks.browser.chromium.ChromiumBrowser.get_bookmark_files': ( 'chromium_bookmarks.html#chromiumbrowser.get_bookmark_files',
                                                                                                                                    'MindVault/bookmarks/browser/chromium.py'),
                                                       'MindVault.bookmarks.browser.chromium.EdgeBrowser': ( 'chromium_bookmarks.html#edgebrowser',
-                                                                                                            'MindVault/bookmarks/browser/chromium.py')}}}
+                                                                                                            'MindVault/bookmarks/browser/chromium.py'),
+                                                      'MindVault.bookmarks.browser.chromium.get_bookmarks_from_browser': ( 'chromium_bookmarks.html#get_bookmarks_from_browser',
+                                                                                                                           'MindVault/bookmarks/browser/chromium.py')}}}
