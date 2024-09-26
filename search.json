@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "chromium_bookmarks.html",
+    "href": "chromium_bookmarks.html",
+    "title": "Extracting browser bookmarks",
+    "section": "",
+    "text": "Schema of how the bookmarks shall be stored:\n\nsource\n\nBookmarkModel\n\n BookmarkModel (name:str, url:str, folder:str, date_added:datetime.date)\n\nA model representing a bookmark.\nBrowser base model (to be inherited by all supported browsers)\n\nsource\n\n\nChromiumBrowser\n\n ChromiumBrowser (name:str, user_data_dirs:Dict[str,str],\n                  default_bookmarks_filename:str,\n                  operating_system:Optional[str]=None,\n                  user_data_dir_path:Optional[pathlib.Path]=None)\n\nBase class for interacting with web browsers’ bookmarks\nFunctions of class ChromiumBrowser must be over-ridden by child classes, if for some browser different handling of bookmarks is required :/\nChrome browser:\n\nsource\n\n\nChromeBrowser\n\n ChromeBrowser (name:str='Chrome',\n                user_data_dirs:Dict[str,str]={'Windows':\n                '~\\\\AppData\\\\Local\\\\Google\\\\Chrome\\\\User Data', 'Mac':\n                '~/Library/Application Support/Google/Chrome', 'Linux':\n                '~/.config/google-chrome'},\n                default_bookmarks_filename:str='Bookmarks',\n                operating_system:Optional[str]=None,\n                user_data_dir_path:Optional[pathlib.Path]=None)\n\nBase class for interacting with web browsers’ bookmarks\nEdge browser:\n\nsource\n\n\nEdgeBrowser\n\n EdgeBrowser (name:str='Microsoft Edge',\n              user_data_dirs:Dict[str,str]={'Windows':\n              '~\\\\AppData\\\\Local\\\\Microsoft\\\\Edge\\\\User Data', 'Mac':\n              '~/Library/Application Support/Microsoft Edge', 'Linux':\n              '~/.config/microsoft-edge'},\n              default_bookmarks_filename:str='Bookmarks',\n              operating_system:Optional[str]=None,\n              user_data_dir_path:Optional[pathlib.Path]=None)\n\nBase class for interacting with web browsers’ bookmarks\nBrave:\n\nsource\n\n\nBraveBrowser\n\n BraveBrowser (name:str='Brave', user_data_dirs:Dict[str,str]={'Windows':\n               '~\\\\AppData\\\\Local\\\\BraveSoftware\\\\Brave-Browser', 'Mac':\n               '~/Library/Application Support/BraveSoftware/Brave-\n               Browser', 'Linux': '~/.config/BraveSoftware/Brave-\n               Browser'}, default_bookmarks_filename:str='Bookmarks',\n               operating_system:Optional[str]=None,\n               user_data_dir_path:Optional[pathlib.Path]=None)\n\nBase class for interacting with web browsers’ bookmarks\n\nsource\n\n\nget_bookmarks_from_browser\n\n get_bookmarks_from_browser\n                             (browser_name:Literal['chrome','edge','brave'\n                             ])\n\nExtracts bookmarks from a specified browser.\n\n\n\n\n\n\n\n\n\nType\nDetails\n\n\n\n\nbrowser_name\nLiteral\ntype of browser to extract bookmarks from currently supported: chrome, edge, brave\n\n\nReturns\nlist",
+    "crumbs": [
+      "Extracting browser bookmarks"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MindVault",
+    "section": "",
+    "text": "pip install MindVault",
+    "crumbs": [
+      "MindVault"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "MindVault",
+    "section": "",
+    "text": "pip install MindVault",
+    "crumbs": [
+      "MindVault"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "MindVault",
+    "section": "How to use",
+    "text": "How to use",
+    "crumbs": [
+      "MindVault"
+    ]
+  }
+]
