@@ -1,9 +1,0 @@
-project:
-  output-dir: _docs
-
-website:
-  title: "mindvault"
-  site-url: "https://TensorMages.github.io/MindVault"
-  description: "AI-powered personal knowledge assistant that transforms your digital footprint into an intelligent knowledge base."
-  repo-branch: main
-  repo-url: "https://github.com/TensorMages/MindVault"
