@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "mindvault"
+version = "0.1.0"
+description = "AI-powered personal knowledge assistant that transforms your digital  footprint into an intelligent knowledge base."
+authors = [
+    "Vedmani Vaidya <vedmani.vaidya@gmail.com>",
+    "Ratniel Kokane <ratniel.kokane1729@gmail.com>"
+]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [
+    { include = "mindvault", from = "." }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+loguru = "^0.7.2"
+llama-index = "^0.11.20"
+pydantic = "^2.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
