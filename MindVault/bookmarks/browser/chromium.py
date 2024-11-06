@@ -62,15 +62,16 @@ class ChromiumBrowser(BaseModel):
         logger.info(f"User bookmark directory path: {self.user_data_dir_path}")
 
     def _set_operating_system(self):
-        if "win" in sys.platform.lower():
-            self.operating_system = "Windows"
-        elif "mac" in sys.platform.lower():
-            self.operating_system = "Mac"
-        elif "linux" in sys.platform.lower():
-            self.operating_system = "Linux"
-        else:
-            self.operating_system = "Unknown"
-            logger.warning(f"Unsupported operating system: {self.operating_system}")
+        self.operating_system = "Mac"
+        # if "win" in sys.platform.lower():
+        #     self.operating_system = "Windows"
+        # elif "mac" in sys.platform.lower():
+        #     self.operating_system = "Mac"
+        # elif "linux" in sys.platform.lower():
+        #     self.operating_system = "Linux"
+        # else:
+        #     self.operating_system = "Unknown"
+        #     logger.warning(f"Unsupported operating system: {self.operating_system}")
 
     def _set_user_data_dir_path(self):
         if self.operating_system in self.user_data_dirs:
@@ -187,5 +188,5 @@ def get_bookmarks_from_browser(
         raise ValueError(f"Unsupported browser: {browser_name}")
     return browser.extract_bookmarks()
 
-bookmarks = get_bookmarks_from_browser("brave")
-bookmarks[:10]
+bookmarks = get_bookmarks_from_browser("chrome")
+print(bookmarks[:10])
