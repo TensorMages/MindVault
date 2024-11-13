@@ -21,7 +21,7 @@ class UserModel(BaseModel):
             database_="neo4j",
         ).summary
         
-        if(summary.counters.nodes_created == 0):
+        if summary.counters.nodes_created == 0:
             logger.info("User already exists.")
         else:
             logger.info("Created {nodes_created} User node in {time} ms.".format(

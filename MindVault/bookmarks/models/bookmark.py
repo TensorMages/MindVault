@@ -28,7 +28,7 @@ class BookmarkModel(BaseModel):
             '''
             MATCH (u:User) WHERE u.email = $userEmail
             MERGE (b:Bookmark { url: $url })
-            ON CREATE SET b.name = $name, b.dateAdded = $dateAdded
+            ON CREATE SET b.name = $name, b.dateAdded = $dateAdded, b.folder = $folder
             WITH u, b
             MERGE(u)-[:LIKES { folder: $folder }]->(b)
             ''',
@@ -40,7 +40,7 @@ class BookmarkModel(BaseModel):
             database_="neo4j",
         ).summary
         
-        if(summary.counters.nodes_created == 0):
+        if summary.counters.nodes_created == 0:
             logger.info("Bookmark already exists.")
         else:
             logger.info("Created {nodes_created} Bookmark node in {time} ms.".format(
