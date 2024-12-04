@@ -16,7 +16,6 @@ with GraphDatabase.driver(URI, auth=AUTH) as driver:
 class Bookmark:
     url: str
     name: str
-    folder: str
     dateAdded: str
 
 @strawberry.type
@@ -110,7 +109,6 @@ def getBookmark(url):
     return Bookmark(
         url=bookmark_data["url"],
         name=bookmark_data["name"],
-        folder=bookmark_data["folder"],
         dateAdded=bookmark_data["dateAdded"],
     )
 

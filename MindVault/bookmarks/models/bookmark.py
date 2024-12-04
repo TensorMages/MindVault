@@ -28,7 +28,7 @@ class BookmarkModel(BaseModel):
             '''
             MATCH (u:User) WHERE u.email = $userEmail
             MERGE (b:Bookmark { url: $url })
-            ON CREATE SET b.name = $name, b.dateAdded = $dateAdded, b.folder = $folder
+            ON CREATE SET b.name = $name, b.dateAdded = $dateAdded
             WITH u, b
             MERGE(u)-[:LIKES { folder: $folder }]->(b)
             ''',
